@@ -1,7 +1,9 @@
 package main
 
 // var mynumber int
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// var card string = "Ace of Spades"
@@ -37,9 +39,20 @@ func main() {
 
 	// cards.saveToFile("cards/var/my_cards.txt")
 
-	cards := newDeckFromFile("cards/var/my_cards.txt")
-	cards.shuffle()
-	fmt.Println(cards.toString())
+	// cards := newDeckFromFile("cards/var/my_cards.txt")
+	// cards.shuffle()
+	// fmt.Println(cards.toString())
+
+	cars := []string{"ferrari", "ford", "holden"}
+
+	for i, brand := range cars {
+		if i%2 == 0 {
+			fmt.Println(fmt.Sprintf("Brand %d: %s", i, brand))
+		} else {
+			fmt.Println("This is odd")
+		}
+
+	}
 
 }
 
