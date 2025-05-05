@@ -6,7 +6,7 @@ func main() {
 	// #1 way to start map
 	// colors := map[string]string{
 	// 	"red":  "#FF0000",
-	// 	"gree": "#4bf745",
+	// 	"green": "#4bf745",
 	// }
 
 	// #2 way to start a map
